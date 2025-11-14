@@ -32,6 +32,7 @@
         --font-sora: "Sora", sans-serif;
         --font-poppins: "Poppins", sans-serif;
         --primary-green: #179800;
+        --gradient: #efebe3;
       }
       :root {
         --speed-per-ch: 0.22s; /* typing speed per character */
@@ -280,7 +281,9 @@
         </div>
       </nav>
       <!-- banner -->
-      <section class="lg:mt-10">
+      <section
+        class="bg-gradient-to-b from-white to-[var(--gradient)] md:mt-10"
+      >
         <!-- animation text -->
         <div class="flex justify-center items-baseline flex-wrap">
           <h1
@@ -289,12 +292,24 @@
             Freshness <span class="text-[#179800]">You Can Count</span> On,
             <br />
             <span
-              class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono typewriter inline-block overflow-hidden whitespace-nowrap border-r-4 border-white box-content text-[#3a5a40]"
+              class="text-3xl md:text-4xl lg:text-5xl font-mono typewriter inline-block overflow-hidden whitespace-nowrap border-r-4 border-white box-content text-[#3a5a40]"
               >Prices You'll Love!</span
             >
           </h1>
         </div>
+        <!-- paragraph -->
+        <div class="flex justify-center items-center max-w-3xl mx-auto my-8">
+          <p class="text-center font-sora text-xl">
+            Shop your daily essentials at unbeatable prices. From fresh produce
+            to pantry staples, we’ve got you covered every day!
+          </p>
+        </div>
+        <!-- img -->
+        <div class="flex justify-center items-center">
+          <img src="c2-assets/hero-vegetables.png" alt="" />
+        </div>
       </section>
     </header>
+    <main></main>
   </body>
 </html>
