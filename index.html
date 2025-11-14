@@ -33,6 +33,32 @@
         --font-poppins: "Poppins", sans-serif;
         --primary-green: #179800;
       }
+      :root {
+        --speed-per-ch: 0.22s; /* typing speed per character */
+      }
+
+      /* Typewriter animation only on the span */
+      .typewriter {
+        text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+        animation: typing calc(var(--speed-per-ch) * 21) steps(21, end) 0.1s
+            infinite alternate,
+          caret-blink 0.7s steps(1) infinite;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0ch;
+        }
+        to {
+          width: 21ch;
+        } /* number of characters in the animated text */
+      }
+
+      @keyframes caret-blink {
+        50% {
+          border-color: transparent;
+        }
+      }
     </style>
   </head>
   <body>
@@ -253,6 +279,22 @@
           </div>
         </div>
       </nav>
+      <!-- banner -->
+      <section class="lg:mt-10">
+        <!-- animation text -->
+        <div class="flex justify-center items-baseline flex-wrap">
+          <h1
+            class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-sora text-center font-semibold"
+          >
+            Freshness <span class="text-[#179800]">You Can Count</span> On,
+            <br />
+            <span
+              class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono typewriter inline-block overflow-hidden whitespace-nowrap border-r-4 border-white box-content"
+              >Prices You'll Love!</span
+            >
+          </h1>
+        </div>
+      </section>
     </header>
   </body>
 </html>
